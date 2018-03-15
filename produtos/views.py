@@ -3,7 +3,9 @@ from django.shortcuts import render, HttpResponse
 # Create your views here.
 
 def paginaInicial(request):
-    return HttpResponse("Bem vindo a pagina do app de produtos")
+    descricao = "Ola Mundo"
+    numero = 20 + 30
+    return render(request,"produtos/home.html",{"des":descricao, "num": numero})
 
 def paginaLogin(request):
-    return HttpResponse("Pagina de Login!")
+    return render(request,'produtos/login.html')
